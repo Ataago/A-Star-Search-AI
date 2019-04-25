@@ -25,7 +25,7 @@ def draw_grid(graph, width=2, **style):
             print("%%-%ds" % width % draw_tile(graph, (x, y), style, width), end="")
         print()
 
-class SquareGrid:
+class SquareGrid:  #Matrix
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -46,7 +46,7 @@ class SquareGrid:
         results = filter(self.passable, results)
         return results
 
-class GridWithWeights(SquareGrid):
+class GridWithWeights(SquareGrid): 
     def __init__(self, width, height):
         super().__init__(width, height)
         self.weights = {}
